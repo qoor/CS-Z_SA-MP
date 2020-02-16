@@ -1,0 +1,5 @@
+# Binaries
+**/*.amx
+
+# Editor configs
+**/.vscode/
