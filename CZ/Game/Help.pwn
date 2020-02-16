@@ -130,7 +130,7 @@ function ShowPlayerHelpDialog(playerid, step = 0)
 				{FF0000}SA-MP Server 버전: {FFFFFF}0.3d\n\
 				{FF0000}MySQL Plugin 버전: {FFFFFF}R41-4\n\
 				\n\
-				{FFFFFF}Copyright (c) {FF0000}2019 Qoo All rights reserved.",
+				{FFFFFF}Copyright (c) {FF0000}2020 Qoo",
 				"확인", ""
 			);
 		}

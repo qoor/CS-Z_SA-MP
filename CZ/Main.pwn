@@ -121,7 +121,7 @@ public OnGameModeLoadFinish()
 	print("                     Made by Qoo");
 	print("                Version: "MODE_VERSION"");
 	print("Thanks to Junggle, Fasa, Keroro, RangE, Claire_Redfield, EVOLUTION");
-	print("    Copyright (c) 2018, 2019 Qoo. All rights reserved.");
+	print("               Copyright (c) 2020 Qoo");
 	print("========================================================");
 }
 
