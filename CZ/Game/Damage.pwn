@@ -102,14 +102,10 @@ public G_Damage_PlayerTakeDamage(playerid, issuerid, Float: amount, weaponid)
 			GivePlayerDamage(issuerid, playerid, weaponid, amount);
 		}
 	}
-	else
+	else // If damaged by other players
 	{
 		canDamage = true;
 	}
-	/*else if (weaponid == WEAPON_GRENADE || weaponid == 51)
-	{
-		old_SetPlayerHealth(playerid, health + amount);
-	}*/
 	
 	if (!canDamage)
 	{
@@ -306,7 +302,7 @@ function ShowPlayerDamagedInfo(playerid, showplayerid = INVALID_PLAYER_ID)
 		
 		content = "{FF9900}피격자\t무기\t받은 데미지\t시간\n";
 		
-		for (new i = MAX_DAMAGED_LOG_AMOUNT - (MAX_DAMAGED_LOG_AMOUNT - damagedPlayerCount[playerid] - 1); i >= 0; --i)
+		for (new i = damagedPlayerCount[playerid] - 1; i >= 0; --i)
 		{
 			if (damagedInfo[playerid][i][dmWeaponId] == -1)
 				continue;

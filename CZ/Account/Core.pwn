@@ -469,9 +469,10 @@ public A_Core_PlayerCommandText(playerid, const command[], const params[])
 		SavePlayerAccount(playerid);
 
 		format(string, sizeof(string), "당신은 스코어 %d을(를) 사용하여 스킨을 %d번 스킨으로 설정하셨습니다.", requireScore, skinid);
+		InfoClientMessage(playerid, string);
 		
 		if (requireScore == 2500)
-			strcat(string, "다음 구매 부터는 스코어 100(으)로 스킨 변경이 가능합니다.");
+			NewsClientMessage(playerid, "다음 구매 부터는 스코어 100(으)로 스킨 변경이 가능합니다.");
 		
 		return ErrorClientMessage(playerid, string);
 	}

@@ -145,20 +145,6 @@ function ShowPlayerHelpDialog(playerid, step = 0)
 		}
 	case 6:
 		{
-			new string[256] = { "{FF0000}Lv. 1: {FFFFFF}/경고 /차감 /투표시작 /투표현황 /투표중단 /음악방송 /무기검사 /동의 /거절 /데미지로그조회" };
-			new rcon = IsPlayerAdmin(playerid);
-
-			if (rcon || IsPlayerSubAdmin(playerid, 2))
-				strcat(string, "\n{FF0000}Lv. 2: {FFFFFF}/(게임)중지 /redo /맵변경 /좀숙주 /인숙주 /어드콜 /맵첸타입 /소생 /이벤트");
-			else if (rcon || IsPlayerSubAdmin(playerid, 3))
-				strcat(string, "\n{FF0000}Lv. 3, RCON: {FFFFFF}/리붓");
-			else if (rcon)
-				strcat(string, "\n{FF0000}RCON: {FFFFFF}/(운)영자 /서버종료 /방송권한");
-			
-			ShowPlayerDialog(playerid, DIALOG_HELP + 1, DIALOG_STYLE_MSGBOX, "관리자 명령어", string, "확인", "");
-		}
-	case 7:
-		{
 			new string[4096];
 
 			strcat(string, "Counter-Strike: Zombie for SA-MP");
@@ -186,6 +172,21 @@ function ShowPlayerHelpDialog(playerid, step = 0)
 			strcat(string, "SOFTWARE.");
 
 			ShowPlayerDialog(playerid, DIALOG_HELP + 1, DIALOG_STYLE_MSGBOX, "라이선스 정보", string, "확인", "");
+		}
+
+	default: // Always on bottom
+		{
+			new string[256] = { "{FF0000}Lv. 1: {FFFFFF}/경고 /차감 /투표시작 /투표현황 /투표중단 /음악방송 /무기검사 /동의 /거절 /데미지로그조회" };
+			new rcon = IsPlayerAdmin(playerid);
+
+			if (rcon || IsPlayerSubAdmin(playerid, 2))
+				strcat(string, "\n{FF0000}Lv. 2: {FFFFFF}/(게임)중지 /redo /맵변경 /좀숙주 /인숙주 /어드콜 /맵첸타입 /소생 /이벤트");
+			else if (rcon || IsPlayerSubAdmin(playerid, 3))
+				strcat(string, "\n{FF0000}Lv. 3, RCON: {FFFFFF}/리붓");
+			else if (rcon)
+				strcat(string, "\n{FF0000}RCON: {FFFFFF}/(운)영자 /서버종료 /방송권한");
+			
+			ShowPlayerDialog(playerid, DIALOG_HELP + 1, DIALOG_STYLE_MSGBOX, "관리자 명령어", string, "확인", "");
 		}
 	}
 
