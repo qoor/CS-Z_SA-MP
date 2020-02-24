@@ -41,11 +41,7 @@
 
 #include <a_mysql>
 
-#include <flydetect>
-
-#include <QAuth>
 #include <QFader>
-
 #include <QModule>
 
 #define DEFAULT_TEAM 7
@@ -54,7 +50,6 @@
 #include "./CZ/Inc/Color.inc"
 
 #include "./CZ/Util/Inc/Dialog.inc"
-
 
 #define MODE_VERSION "v1.107"
 
